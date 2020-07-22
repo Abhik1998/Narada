@@ -1,5 +1,5 @@
 # Narada
-### A web browser
+### A Quarkus based web browser
 Narada has been deployed loacally.
 The images that have been built are given below:
 ![](narada-docker.png)
