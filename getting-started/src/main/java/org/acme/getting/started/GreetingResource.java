@@ -12,7 +12,7 @@ public class GreetingResource {
     @Produces(MediaType.TEXT_PLAIN)
     public String hello() {
         ProcessBuilder processBuilder = new ProcessBuilder();
-        processBuilder.command("bash","-c","npm -i run dev --prefix $HOME/getting-started/src/main/desktop/");
+        processBuilder.command("bash","-c","npm i --prefix $HOME/Narada/getting-started/src/main/desktop/ && npm run dev --prefix $HOME/Narada/getting-started/src/main/desktop/");
         // ProcessBuilder p1 = new ProcessBuilder();
         // p1.command("bash","-c","yarn --cwd src/main/desktop/ run dev");
 
@@ -21,8 +21,12 @@ public class GreetingResource {
         System.out.println("Over....");
 
         try {
-
-            Process process = processBuilder.start();
+            long start = System.currentTimeMillis();
+            long end = start + 60*1000; // 60 seconds * 1000 ms/sec
+            while (System.currentTimeMillis() < end)
+            {
+                // run
+                Process process = processBuilder.start();
         
             StringBuilder output = new StringBuilder();
         
@@ -33,6 +37,8 @@ public class GreetingResource {
             while ((line = reader.readLine()) != null) {
                 output.append(line + "\n");
                 System.out.println(output);
+                if(output.toString().equals("[1]     at WebContents.emit (events.js:228:7)" + "\n"))
+                return "test over";
             }
         
             int exitVal = process.waitFor();
@@ -46,12 +52,16 @@ public class GreetingResource {
                 //abnormal...
             }
         
-        } catch (IOException e) {
+        }
+     } catch (IOException e) {
             e.printStackTrace();
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
 
-        return "hello";
+        
+            
+            return "hello";
+            
     }
 }

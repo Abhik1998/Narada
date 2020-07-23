@@ -1,0 +1,5 @@
+FROM adoptopenjdk:8-jre-openj9
+RUN mkdir /opt/app
+COPY target/lib/* /opt/app/lib/
+COPY target/*-runner.jar /opt/app/app.jar
+CMD ["java", "-jar", "/opt/app/app.jar"]
