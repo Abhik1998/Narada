@@ -10,6 +10,7 @@ The time taken for the application to start :
 Memory of the application : 71 MB
 
 ### To get started with it
+(Advisable to clone in the HOME directory)
 ```
 cd getting-started
 ./mvnw compile quarkus:dev
