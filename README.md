@@ -8,3 +8,14 @@ The time taken for the application to start :
 ![](narada-start-time.png)
 
 Memory of the application : 71 MB
+
+### To get started with it
+```
+cd getting-started
+./mvnw compile quarkus:dev
+```
+Incase, there are any issues with it then try out
+```
+./mvnw package
+```
+This also runs the test and builds the jar files for the version 0.01 (currently)
