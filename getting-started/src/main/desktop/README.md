@@ -1,9 +1,9 @@
 <p align="center">
-  <a href="https://wexond.net"><img src="static/icons/icon.png" width="256"></a>
+  <a href=""><img src="static/icons/icon.png" width="256"></a>
 </p>
 
 <div align="center">
-  <h1>Wexond</h1>
+  <h1>Narada</h1>
 
 [![Actions Status](https://github.com/wexond/desktop/workflows/Build/badge.svg)](https://github.com/wexond/desktop/actions)
 [![Downloads](https://img.shields.io/github/downloads/wexond/desktop/total.svg?style=flat-square)](https://github.com/wexond/desktop/releases)
