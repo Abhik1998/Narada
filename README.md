@@ -1,6 +1,6 @@
 # Narada
 ### A Quarkus based web browser
-Narada has been deployed loacally.
+Narada has been deployed locally.
 The images that have been built are given below:
 
 

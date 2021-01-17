@@ -1,6 +1,6 @@
 {
-  "appId": "org.wexond.wexond",
-  "productName": "Wexond",
+  "appId": "org.narada.narada",
+  "productName": "Narada",
   "nsis": {
     "include": "static/installer.nsh"
   },
